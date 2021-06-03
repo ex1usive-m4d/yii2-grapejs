@@ -1,0 +1,21 @@
+{
+    "name": "chejam/yii2-grapesjs",
+    "description": "Grapesjs widget",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","yii2 grapesjs"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Bolshakov",
+            "email": "ivan.bolshakov@chejam.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "chejam\\yii2grapesjs\\": ""
+        }
+    }
+}
