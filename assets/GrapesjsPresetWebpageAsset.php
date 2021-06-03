@@ -8,7 +8,6 @@ use yii\web\AssetBundle;
 /**
  * Class GrapesjsPresetWebpageAsset
  *
- * @author Zura Sekhniashvili <zurasekhniashvili@gmail.com>
  * @package chejam\yii2grapesjs\assets
  */
 class GrapesjsPresetWebpageAsset extends AssetBundle

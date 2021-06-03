@@ -8,7 +8,6 @@ use yii\web\AssetBundle;
 /**
  * Class GrapesjsAsset
  *
- * @author Zura Sekhniashvili <zurasekhniashvili@gmail.com>
  * @package chejam\yii2grapesjs\assets
  */
 class GrapesjsAsset extends AssetBundle
