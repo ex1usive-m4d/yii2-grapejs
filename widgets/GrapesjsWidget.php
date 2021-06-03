@@ -3,6 +3,7 @@
 namespace chejam\yii2grapesjs\widgets;
 
 
+use chejam\yii2grapesjs\assets\GrapesjsAsset;
 use chejam\yii2grapesjs\assets\GrapesjsPresetWebpageAsset;
 use Yii;
 use yii\base\Widget;
@@ -45,6 +46,7 @@ class GrapesjsWidget extends Widget
     protected function registerPlugin()
     {
         $view = $this->getView();
+        GrapesjsAsset::register($view);
         GrapesjsPresetWebpageAsset::register($view);
         $id = $this->options['id'];
 
