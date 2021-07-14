@@ -54,7 +54,14 @@ class GrapesjsWidget extends Widget
             $clientOptions = Json::htmlEncode(array_merge_recursive([
                 'container' => "#$id",
                 'fromElement' => true,
-                'plugins' => ['gjs-preset-webpage'],
+                'plugins' => [
+                    'grapesjs-preset-webpage'
+                ],
+                'pluginsOpts' => [
+                    "grapesjs-preset-webpage" => [
+                        "blocksBasicOpts" => ["flexGrid" => true]
+                    ],
+                ],
                 'blockManager' => [
                     'appendTo' =>'#blocks',
                 ],
@@ -82,6 +89,22 @@ class GrapesjsWidget extends Widget
                     $js .= "editor.on('$name', $callback);";
                 }
             }
+
+            if (!empty($this->clientOptions['deviceManager'])) {
+                $js .= "cmdm.add('set-device-desktop', {
+                            run: function(ed) { ed.setDevice('Desktop') },
+                            stop: function() {},
+                          });
+                          cmdm.add('set-device-tablet', {
+                            run: function(ed) { ed.setDevice('Tablet') },
+                            stop: function() {},
+                          });
+                          cmdm.add('set-device-mobile', {
+                            run: function(ed) { ed.setDevice('Mobile portrait') },
+                            stop: function() {},
+                          });";
+            }
+
             $view->registerJs("(function(){
                 $js
             })();");
