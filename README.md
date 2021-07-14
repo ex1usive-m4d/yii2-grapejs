@@ -1,12 +1,11 @@
-Grapesjs AssetBundle and widgets
+Grapesjs AssetBundle and widget
 ================================
-Grapesjs AssetBundle, widgets and module
+Grapesjs AssetBundle, widget
 
 Installation
 ------------
 
-
-or add
+add
 
 ```
 "chejam/yii2-grapesjs": "^v0.1.0"
